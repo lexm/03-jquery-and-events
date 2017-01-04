@@ -1,25 +1,28 @@
 {
-  "extends": "eslint:recommended",
-  "parserOptions": {
-    "ecmaVersion": 6,
-    "ecmaFeatures": {"impliedStrict": true}
+   "settings": {
+     "ecmascript": 5
+  },
+  "ecmaFeatures": {
+    "modules": true
   },
   "env": {
     "browser": true,
     "jquery": true,
-    "node": true,
-    "es6": true
+    "node": true
   },
   "rules": {
-    "eqeqeq": ["error", "always"],
-    "no-template-curly-in-string": "error",
-    "no-console": "off",
-    "no-undefined": "off",
-    "indent": ["error", 2],
-    "quotes": ["warn", "single", {"allowTemplateLiterals": true}],
-    "no-multi-spaces": ["warn", {"exceptions": { "VariableDeclarator": true }}],
-    "no-trailing-spaces": "warn",
-    "new-cap": "warn",
-    "no-redeclare": ["error", { "builtinGlobals": true }]
+    "semi": [2, "always"],
+    "strict": 0,
+    "indent": [2, 2],
+    "eqeqeq": 1,
+    "quotes": [1, "single"],
+    "no-multi-spaces": [1, {
+      "exceptions": {
+        "VariableDeclarator": true,
+        "FunctionExpression": true
+      }
+    }],
+    "key-spacing": [0, {"align": "value"}],
+    "no-underscore-dangle": 0
   }
 }
